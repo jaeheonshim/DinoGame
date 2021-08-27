@@ -1,10 +1,12 @@
 #include <raylib.h>
 
+#include "BackgroundRenderer.h"
+
 int main() {
     const int windowWidth = 800;
     const int windowHeight = 450;
 
-    const int gameWidth = 1200;
+    const int gameWidth = 1202;
 
     SetConfigFlags(FLAG_WINDOW_RESIZABLE);
 
@@ -12,6 +14,8 @@ int main() {
 
     Texture2D sprites = LoadTexture("assets/spritesheet.png");
     Vector2 position = {0, 0};
+
+    InitBackground(sprites);
 
     SetTargetFPS(60);
 
@@ -21,7 +25,7 @@ int main() {
         float scale = (float) GetScreenWidth() / gameWidth;
 
         ClearBackground(RAYWHITE);
-        DrawTextureEx(sprites, position, 0, scale, WHITE);
+        DrawBackground(scale);
 
         EndDrawing();
     }
