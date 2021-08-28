@@ -1,12 +1,11 @@
 #include <raylib.h>
 
+#include "main.h"
 #include "BackgroundRenderer.h"
 
 int main() {
     const int windowWidth = 800;
     const int windowHeight = 450;
-
-    const int gameWidth = 1202;
 
     SetConfigFlags(FLAG_WINDOW_RESIZABLE);
 
@@ -22,11 +21,12 @@ int main() {
     while(!WindowShouldClose()) {
         BeginDrawing();
 
-        float scale = (float) GetScreenWidth() / gameWidth;
+        float scale = (float) GetScreenWidth() / GAMEWIDTH;
 
-        ClearBackground(RAYWHITE);
+        ClearBackground(BLUE);
         DrawBackground(scale);
-
+        ScrollBackground(GetFrameTime());
+        
         EndDrawing();
     }
 

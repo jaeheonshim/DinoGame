@@ -1,0 +1,1 @@
+#define GAMEWIDTH 1400

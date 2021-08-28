@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.m": "c"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "c:\\Users\\jaehe\\OneDrive\\Documents\\Projects\\C\\Dinosaur",
+            "binaryPath": "c:\\Users\\jaehe\\OneDrive\\Documents\\Projects\\C\\Dinosaur\\a.exe",
+            "binaryArgs": []
+        }
+    ]
+}
