@@ -22,9 +22,10 @@ int main() {
         BeginDrawing();
 
         float scale = (float) GetScreenWidth() / GAMEWIDTH;
+        float yPos = (float) GetScreenHeight() / 2;
 
-        ClearBackground(BLUE);
-        DrawBackground(scale);
+        ClearBackground(WHITE);
+        DrawBackground(scale, yPos);
         ScrollBackground(GetFrameTime());
         
         EndDrawing();

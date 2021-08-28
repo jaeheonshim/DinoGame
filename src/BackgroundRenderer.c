@@ -17,7 +17,7 @@ static BgData ground2Data;
 static const float scrollVelocity = 100;
 
 Rectangle generateSrcRect(Rectangle rect, float pos);
-Rectangle generateDestRect(float pos, float scale);
+Rectangle generateDestRect(float pos, float scale, float yPos);
 
 void InitBackground(Texture2D ss) {
     spritesheet = ss;
@@ -36,11 +36,11 @@ void InitBackground(Texture2D ss) {
     ground2Data.pos = ground1.width;
 }
 
-void DrawBackground(float scale) {
+void DrawBackground(float scale, float yPos) {
     Vector2 origin = {0, 0};
     
-    DrawTexturePro(spritesheet, generateSrcRect(ground1, ground1Data.pos), generateDestRect(ground1Data.pos, scale), origin, 0, WHITE);
-    DrawTexturePro(spritesheet, generateSrcRect(ground2, ground2Data.pos), generateDestRect(ground2Data.pos, scale), origin, 0, WHITE);
+    DrawTexturePro(spritesheet, generateSrcRect(ground1, ground1Data.pos), generateDestRect(ground1Data.pos, scale, yPos), origin, 0, WHITE);
+    DrawTexturePro(spritesheet, generateSrcRect(ground2, ground2Data.pos), generateDestRect(ground2Data.pos, scale, yPos), origin, 0, WHITE);
 }
 
 Rectangle generateSrcRect(Rectangle rect, float pos) {
@@ -50,9 +50,9 @@ Rectangle generateSrcRect(Rectangle rect, float pos) {
     return rect;
 }
 
-Rectangle generateDestRect(float pos, float scale) {
+Rectangle generateDestRect(float pos, float scale, float yPos) {
     float xOffset = (GAMEWIDTH - ground1.width) / 2 * scale;
-    Rectangle dest = {xOffset + (pos >= 0 ? abs(pos) : 0) * scale, 0, (ground1.width - abs(pos)) * scale, ground1.height * scale};
+    Rectangle dest = {xOffset + (pos >= 0 ? abs(pos) : 0) * scale, yPos, (ground1.width - abs(pos)) * scale, ground1.height * scale};
     return dest;
 }
 
