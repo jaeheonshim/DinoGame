@@ -5,8 +5,9 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Sat Aug 28 18:35:09 2021
+# Make data base, printed on Sat Aug 28 19:10:58 2021
 
 # Variables
 
@@ -21,21 +22,21 @@ USERPROFILE = C:\Users\jaehe
 # environment
 LOCALAPPDATA = C:\Users\jaehe\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-adc6b541-cbe9-4921-9880-7aeb9ade1da5-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-6437bfbd-e92d-48d2-b40a-ee1148dbc128-sock
 # environment
-VSCODE_CWD = C:\Users\jaehe\OneDrive\Documents\Projects\C\Dinosaur
+VSCODE_CWD = C:\Users\jaehe\AppData\Local\Programs\Microsoft VS Code
 # environment
 SYSTEMROOT = C:\Windows
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-PSMODULEPATH = %ProgramFiles%\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9896_MEQLMTAWETCKFAGH
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13004_ZKSTHOCVDHIBGUHY
 # environment
 VSCODE_BROWSER_CODE_LOADING = bypassHeatCheck
 # environment
@@ -93,7 +94,7 @@ MAKEFILE_LIST := makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 9896
+VSCODE_PID = 13004
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -127,8 +128,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Common F 
-iles\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\jaehe\AppData\Local\Microsoft\WindowsApps;C:\Users\jaehe\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\ProgramData\chectl\chectl\bin
+PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\jaehe\AppData\Local\Microsoft\WindowsApps;C:\Users\jaehe\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;;C:\ProgramData\chectl\chectl\bin
 # environment
 ZES_ENABLE_SYSMAN = 1
 # environment
@@ -220,10 +220,10 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/jaehe/OneDrive/Documents/Projects/C/Dinosaur, mtime 1630189904): 10 files, no impossibilities.
-# ./src (key c:/Users/jaehe/OneDrive/Documents/Projects/C/Dinosaur/src, mtime 1630104840): 8 files, no impossibilities.
+# . (key c:/Users/jaehe/OneDrive/Documents/Projects/C/Dinosaur, mtime 1630192096): 10 files, no impossibilities.
+# ./src (key c:/Users/jaehe/OneDrive/Documents/Projects/C/Dinosaur/src, mtime 1630192236): 10 files, no impossibilities.
 
-# 18 files, no impossibilities in 2 directories.
+# 20 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -286,12 +286,12 @@ makefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 180 B / avg = 9 B
-# current buf: size = 8162 B / used = 180 B / count = 20 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 198 B / avg = 9 B
+# current buf: size = 8162 B / used = 198 B / count = 22 / avg = 9 B
 
-# strcache performance: lookups = 29 / hit rate = 31%
+# strcache performance: lookups = 31 / hit rate = 29%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=0/29=0%
-# Finished Make data base on Sat Aug 28 18:35:09 2021
+# Load=22/8192=0%, Rehash=0, Collisions=0/31=0%
+# Finished Make data base on Sat Aug 28 19:10:58 2021
 
  

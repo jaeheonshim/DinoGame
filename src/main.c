@@ -2,6 +2,7 @@
 
 #include "main.h"
 #include "BackgroundRenderer.h"
+#include "Player.h"
 
 int main() {
     const int windowWidth = 800;
@@ -24,9 +25,18 @@ int main() {
         float scale = (float) GetScreenWidth() / GAMEWIDTH;
         float yPos = (float) GetScreenHeight() / 2;
 
+        float delta = GetFrameTime();
+
         ClearBackground(WHITE);
+        ScrollBackground(delta);
+        UpdatePlayer(delta);
+
+        if(IsKeyPressed(KEY_SPACE)) {
+            JumpPlayer();
+        }
+
         DrawBackground(scale, yPos);
-        ScrollBackground(GetFrameTime());
+        DrawPlayer(scale, yPos);
         
         EndDrawing();
     }
