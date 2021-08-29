@@ -1,6 +1,6 @@
 #include <raylib.h>
 
-typedef enum {SMALL, LARGE} EnemyType;
+typedef enum {SMALL1, SMALL2, SMALL3} EnemyType;
 
 typedef struct {
     EnemyType type;

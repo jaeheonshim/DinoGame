@@ -5,10 +5,13 @@
 
 static Texture2D ss;
 
-static Rectangle smallEnemy = {447, 2, 34, 70};
+static Rectangle smallEnemy1 = {447, 2, 34, 70};
+static Rectangle smallEnemy2 = {480, 2, 68, 70};
+static Rectangle smallEnemy3 = {548, 2, 102, 70};
 
 Rectangle ScaleDest(Rectangle rect, float scale, float posY);
 Rectangle ClipSrc(Rectangle src, Rectangle dest);
+Rectangle GetTexture(Enemy enemy);
 
 void InitEnemyRenderer(Texture2D spritesheet) {
     ss = spritesheet;
@@ -21,9 +24,23 @@ void RenderEnemies(float scale, float posY) {
 
     while(list != NULL) {
         Rectangle collider = GetEnemyCollider(list->enemy);
-        DrawTexturePro(ss, ClipSrc(smallEnemy, collider), ScaleDest(collider, scale, posY), (Vector2) {0, 0}, 0, WHITE);
+        Rectangle texture = GetTexture(list->enemy);
+        DrawTexturePro(ss, ClipSrc(texture, collider), ScaleDest(collider, scale, posY), (Vector2) {0, 0}, 0, WHITE);
 
         list = list->next;
+    }
+}
+
+Rectangle GetTexture(Enemy enemy) {
+    switch(enemy.type) {
+        case SMALL1:
+            return smallEnemy1;
+        case SMALL2:
+            return smallEnemy2;
+        case SMALL3:
+            return smallEnemy3;
+        default:
+            return smallEnemy1;
     }
 }
 

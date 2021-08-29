@@ -40,7 +40,7 @@ int main() {
         }
 
         if(IsKeyPressed(KEY_ENTER)) {
-            QueueEnemy((Enemy) {SMALL, GAMEWIDTH});
+            QueueEnemy((Enemy) {SMALL3, GAMEWIDTH});
         }
 
         if(IsKeyPressed(KEY_Z)) {

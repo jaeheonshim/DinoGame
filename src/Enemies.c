@@ -6,10 +6,28 @@
 static struct EnemyListItem *first = NULL;
 static struct EnemyListItem *last = NULL;
 
-static Rectangle smallEnemy = {0, 0, 34, 70};
+static Rectangle smallEnemy1 = {0, 0, 34, 70};
+static Rectangle smallEnemy2 = {0, 0, 68, 70};
+static Rectangle smallEnemy3 = {0, 0, 102, 70};
 
 Rectangle GetEnemyCollider(Enemy enemy) {
-    Rectangle rect = smallEnemy;
+    Rectangle rect;
+
+    switch(enemy.type) {
+        case SMALL1:
+            rect = smallEnemy1;
+            break;
+        case SMALL2:
+            rect = smallEnemy2;
+            break;
+        case SMALL3:
+            rect = smallEnemy3;
+            break;
+        default:
+            rect = smallEnemy1;
+            break;
+    }
+
     rect.x = enemy.pos;
 
     return rect;
