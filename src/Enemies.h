@@ -18,4 +18,5 @@ void QueueEnemy(Enemy enemy);
 void DequeueEnemy(void);
 int CountEnemies();
 void UpdateEnemies(float delta, float scrollVelocity);
+Rectangle ScaleDest(Rectangle rect, float scale, float posY);
 struct EnemyListItem *GetEnemyList();
