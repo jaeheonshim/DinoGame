@@ -11,6 +11,7 @@ int main() {
     SetConfigFlags(FLAG_WINDOW_RESIZABLE);
 
     InitWindow(windowWidth, windowHeight, "Dinosaur Game");
+    InitAudioDevice();
 
     Texture2D sprites = LoadTexture("assets/spritesheet.png");
     Vector2 position = {0, 0};

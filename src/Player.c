@@ -1,17 +1,19 @@
 #include <raylib.h>
 #include <stdbool.h>
 
-static const float jumpVel = 1000;
+static const float jumpVel = 1100;
 static const float xPos = 170;
 
 static const float runFrame = 0.1;
 
 static float y = 0;
 static float velY = 0;
-static float accelY = -3000;
+static float accelY = -3500;
 static bool jumping = false;
 
 static float stateTime = 0;
+
+static Sound jumpFx;
 
 static Texture2D ss;
 static Rectangle idle1 = {1336, 0, 88, 94};
@@ -23,7 +25,7 @@ Rectangle GetTextureRect() {
     if(jumping) {
         return idle1;
     }
-    
+
     if((int) (stateTime / runFrame) % 2 == 0) {
         return run1;
     } else {
@@ -33,6 +35,8 @@ Rectangle GetTextureRect() {
 
 void InitPlayer(Texture2D spritesheet) {
     ss = spritesheet;
+
+    jumpFx = LoadSound("assets/jump.ogg");
 }
 
 void DrawPlayer(float scale, float yPos) {
@@ -55,6 +59,7 @@ void UpdatePlayer(float delta) {
 
 void JumpPlayer() {
     if(!jumping) {
+        PlaySound(jumpFx);
         velY = jumpVel;
         jumping = true;
     }
