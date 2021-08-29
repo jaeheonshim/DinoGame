@@ -14,7 +14,7 @@ static Rectangle ground2;
 static BgData ground1Data;
 static BgData ground2Data;
 
-static const float scrollVelocity = 100;
+static const float scrollVelocity = 200;
 
 Rectangle generateSrcRect(Rectangle rect, float pos);
 Rectangle generateDestRect(float pos, float scale, float yPos);
@@ -22,14 +22,14 @@ Rectangle generateDestRect(float pos, float scale, float yPos);
 void InitBackground(Texture2D ss) {
     spritesheet = ss;
 
-    ground1.x = 0;
+    ground1.x = 1;
     ground1.y = 100;
     ground1.width = ss.width / 2.0;
     ground1.height = 26;
 
     ground2.x = ss.width / 2.0;
     ground2.y = 100;
-    ground2.width = ss.width / 2.0;
+    ground2.width = ss.width / 2.0 - 1;
     ground2.height = 26;
 
     ground1Data.pos = 0;

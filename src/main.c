@@ -15,6 +15,7 @@ int main() {
     Texture2D sprites = LoadTexture("assets/spritesheet.png");
     Vector2 position = {0, 0};
 
+    InitPlayer(sprites);
     InitBackground(sprites);
 
     SetTargetFPS(60);
