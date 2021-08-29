@@ -13,6 +13,7 @@ struct EnemyListItem {
 };
 
 Rectangle GetEnemyCollider(Enemy enemy);
+void SpawnRandomEnemy();
 void QueueEnemy(Enemy enemy);
 void DequeueEnemy(void);
 int CountEnemies();

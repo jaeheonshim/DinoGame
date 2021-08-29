@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 #include "Enemies.h"
+#include "main.h"
 
 static struct EnemyListItem *first = NULL;
 static struct EnemyListItem *last = NULL;
@@ -31,6 +32,11 @@ Rectangle GetEnemyCollider(Enemy enemy) {
     rect.x = enemy.pos;
 
     return rect;
+}
+
+void SpawnRandomEnemy() {
+    int type = GetRandomValue(0, 2);
+    QueueEnemy((Enemy) {type, GAMEWIDTH});
 }
 
 void QueueEnemy(Enemy enemy) {
@@ -78,7 +84,6 @@ void UpdateEnemies(float delta, float scrollVelocity) {
     while(list != NULL) {
         list->enemy.pos -= deltaX;
         if(list->enemy.pos < 0) {
-            printf("Dequeue\n");
             DequeueEnemy();
         }
 

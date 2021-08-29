@@ -26,6 +26,7 @@ void RenderEnemies(float scale, float posY) {
         Rectangle collider = GetEnemyCollider(list->enemy);
         Rectangle texture = GetTexture(list->enemy);
         DrawTexturePro(ss, ClipSrc(texture, collider), ScaleDest(collider, scale, posY), (Vector2) {0, 0}, 0, WHITE);
+        DrawRectangleLinesEx(ScaleDest(collider, scale, posY), 2, RED);
 
         list = list->next;
     }
