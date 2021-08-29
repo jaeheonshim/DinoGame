@@ -3,12 +3,14 @@
 #include "main.h"
 #include "BackgroundRenderer.h"
 #include "Player.h"
+#include "Enemies.h"
+#include "EnemyRenderer.h"
 
 int main() {
     const int windowWidth = 800;
     const int windowHeight = 450;
 
-    SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
 
     InitWindow(windowWidth, windowHeight, "Dinosaur Game");
     InitAudioDevice();
@@ -18,8 +20,7 @@ int main() {
 
     InitPlayer(sprites);
     InitBackground(sprites);
-
-    SetTargetFPS(60);
+    InitEnemyRenderer(sprites);
 
     while(!WindowShouldClose()) {
         BeginDrawing();
@@ -30,14 +31,24 @@ int main() {
         float delta = GetFrameTime();
 
         ClearBackground(WHITE);
-        ScrollBackground(delta);
+        ScrollBackground(delta, 600);
+        UpdateEnemies(delta, 600);
         UpdatePlayer(delta);
 
-        if(IsKeyPressed(KEY_SPACE)) {
+        if(IsKeyDown(KEY_SPACE)) {
             JumpPlayer();
         }
 
+        if(IsKeyPressed(KEY_ENTER)) {
+            QueueEnemy((Enemy) {SMALL, 900});
+        }
+
+        if(IsKeyPressed(KEY_Z)) {
+            DequeueEnemy();
+        }
+
         DrawBackground(scale, yPos);
+        RenderEnemies(scale, yPos);
         DrawPlayer(scale, yPos);
         
         EndDrawing();

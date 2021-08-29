@@ -14,8 +14,6 @@ static Rectangle ground2;
 static BgData ground1Data;
 static BgData ground2Data;
 
-static const float scrollVelocity = 200;
-
 Rectangle generateSrcRect(Rectangle rect, float pos);
 Rectangle generateDestRect(float pos, float scale, float yPos);
 
@@ -56,7 +54,7 @@ Rectangle generateDestRect(float pos, float scale, float yPos) {
     return dest;
 }
 
-void ScrollBackground(float delta) {
+void ScrollBackground(float delta, float scrollVelocity) {
     ground1Data.pos -= delta * scrollVelocity;
     ground2Data.pos -= delta * scrollVelocity;
 

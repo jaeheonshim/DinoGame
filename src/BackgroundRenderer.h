@@ -2,4 +2,4 @@
 
 void InitBackground(Texture2D ss);
 void DrawBackground(float scale, float yPos);
-void ScrollBackground(float delta);
+void ScrollBackground(float delta, float scrollVelocity);
