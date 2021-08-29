@@ -31,8 +31,8 @@ int main() {
         float delta = GetFrameTime();
 
         ClearBackground(WHITE);
-        ScrollBackground(delta, 600);
-        UpdateEnemies(delta, 600);
+        ScrollBackground(delta, 100);
+        UpdateEnemies(delta, 100);
         UpdatePlayer(delta);
 
         if(IsKeyDown(KEY_SPACE)) {
@@ -40,7 +40,7 @@ int main() {
         }
 
         if(IsKeyPressed(KEY_ENTER)) {
-            QueueEnemy((Enemy) {SMALL, 900});
+            QueueEnemy((Enemy) {SMALL, GAMEWIDTH});
         }
 
         if(IsKeyPressed(KEY_Z)) {

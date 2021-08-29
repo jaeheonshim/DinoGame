@@ -49,7 +49,7 @@ Rectangle generateSrcRect(Rectangle rect, float pos) {
 }
 
 Rectangle generateDestRect(float pos, float scale, float yPos) {
-    float xOffset = (GAMEWIDTH - ground1.width) / 2 * scale;
+    float xOffset = (GAMEWIDTH - GROUNDWIDTH) / 2 * scale;
     Rectangle dest = {xOffset + (pos >= 0 ? abs(pos) : 0) * scale, yPos, (ground1.width - abs(pos)) * scale, ground1.height * scale};
     return dest;
 }

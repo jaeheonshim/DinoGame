@@ -12,7 +12,7 @@ struct EnemyListItem {
     struct EnemyListItem *next;
 };
 
-Rectangle GetEnemyCollider(Enemy enemy, float scale, float posY);
+Rectangle GetEnemyCollider(Enemy enemy);
 void QueueEnemy(Enemy enemy);
 void DequeueEnemy(void);
 int CountEnemies();

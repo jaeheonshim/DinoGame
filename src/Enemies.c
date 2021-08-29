@@ -8,12 +8,9 @@ static struct EnemyListItem *last = NULL;
 
 static Rectangle smallEnemy = {0, 0, 34, 70};
 
-Rectangle GetEnemyCollider(Enemy enemy, float scale, float posY) {
+Rectangle GetEnemyCollider(Enemy enemy) {
     Rectangle rect = smallEnemy;
-    rect.x = enemy.pos * scale;
-    rect.width *= scale;
-    rect.height *= scale;
-    rect.y = posY - (smallEnemy.height - 27) * scale;
+    rect.x = enemy.pos;
 
     return rect;
 }
@@ -42,6 +39,8 @@ void DequeueEnemy(void) {
     if(first == NULL) {
         last = NULL;
     }
+
+    MemFree(item);
 }
 
 int CountEnemies() {
@@ -60,6 +59,11 @@ void UpdateEnemies(float delta, float scrollVelocity) {
     struct EnemyListItem *list = GetEnemyList();
     while(list != NULL) {
         list->enemy.pos -= deltaX;
+        if(list->enemy.pos < 0) {
+            printf("Dequeue\n");
+            DequeueEnemy();
+        }
+
         list = list->next;
     }
 }

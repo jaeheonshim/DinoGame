@@ -1,1 +1,2 @@
 #define GAMEWIDTH 1400
+#define GROUNDWIDTH 1202
