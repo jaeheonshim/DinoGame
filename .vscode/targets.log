@@ -6,12 +6,10 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Aug 29 15:18:21 2021
+# Make data base, printed on Mon Sep 06 17:52:55 2021
 
 # Variables
 
-# environment
-FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -21,7 +19,7 @@ USERPROFILE = C:\Users\jaehe
 # environment
 LOCALAPPDATA = C:\Users\jaehe\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-d9d790a3-b4b5-42bb-b687-7b4951afba7f-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-7629b527-5c55-4bf8-941b-51c00ad17ca6-sock
 # environment
 VSCODE_CWD = C:\Users\jaehe\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -29,17 +27,13 @@ SYSTEMROOT = C:\Windows
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-PSMODULEPATH = %ProgramFiles%\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16236_JMBAVTHYUPDFCDFN
-# environment
-VSCODE_BROWSER_CODE_LOADING = bypassHeatCheck
-# environment
-FPS_BROWSER_USER_PROFILE_STRING = Default
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12532_CGUTYPROAKRXVTPE
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -53,7 +47,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\jaehe\AppData\Roaming\Code\CachedData\3866c3553be8b268c8a7f8c0482c0c0177aa8bfa
+VSCODE_CODE_CACHE_PATH = C:\Users\jaehe\AppData\Roaming\Code\CachedData\e7d7e9a9348e6a8cc8c03f877d39cb72e5dfb1ff
 # environment
 LANG = C
 # default
@@ -93,7 +87,7 @@ MAKEFILE_LIST := makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 16236
+VSCODE_PID = 12532
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -127,7 +121,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\jaehe\AppData\Local\Microsoft\WindowsApps;C:\Users\jaehe\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\ProgramData\chectl\chectl\bin
+PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\jaehe\AppData\Local\Microsoft\WindowsApps;C:\Users\jaehe\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;;C:\ProgramData\chectl\chectl\bin
 # environment
 ZES_ENABLE_SYSMAN = 1
 # environment
@@ -162,6 +156,8 @@ USERDOMAIN = LAPTOP-PM5RG9TA
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
+# environment
+__COMPAT_LAYER = DetectorsAppHealth
 # makefile
 .DEFAULT_GOAL := all
 # default
@@ -191,7 +187,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\jaehe\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\ef48566cab69c194cec3c320e841b34c-1.59.1-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\ef48566cab69c194cec3c320e841b34c-1.60.0-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -200,6 +196,8 @@ VSCODE_IPC_HOOK = \\.\pipe\ef48566cab69c194cec3c320e841b34c-1.59.1-main-sock
 SUFFIXES := 
 # environment
 ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
@@ -209,7 +207,7 @@ INCLUDE_PATHS = -I. -I$(RAYLIB_PATH)/src -I$(RAYLIB_PATH)/src/external
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=13/135=10%
+# Load=98/1024=10%, Rehash=0, Collisions=12/134=9%
 
 # Pattern-specific Variable Values
 
@@ -217,10 +215,10 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/jaehe/OneDrive/Documents/Projects/C/Dinosaur, mtime 1630264700): 10 files, no impossibilities.
-# ./src (key c:/Users/jaehe/OneDrive/Documents/Projects/C/Dinosaur/src, mtime 1630264563): 18 files, no impossibilities.
+# . (key c:/Users/jaehe/OneDrive/Documents/Projects/C/Dinosaur, mtime 1630266148): 10 files, no impossibilities.
+# ./src (key c:/Users/jaehe/OneDrive/Documents/Projects/C/Dinosaur/src, mtime 1630268700): 20 files, no impossibilities.
 
-# 28 files, no impossibilities in 2 directories.
+# 30 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -283,12 +281,12 @@ makefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 30 / storage = 304 B / avg = 10 B
-# current buf: size = 8162 B / used = 304 B / count = 30 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 322 B / avg = 10 B
+# current buf: size = 8162 B / used = 322 B / count = 32 / avg = 10 B
 
-# strcache performance: lookups = 39 / hit rate = 23%
+# strcache performance: lookups = 41 / hit rate = 21%
 # hash-table stats:
-# Load=30/8192=0%, Rehash=0, Collisions=0/39=0%
-# Finished Make data base on Sun Aug 29 15:18:21 2021
+# Load=32/8192=0%, Rehash=0, Collisions=0/41=0%
+# Finished Make data base on Mon Sep 06 17:52:55 2021
 
  

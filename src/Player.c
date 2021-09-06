@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#include "Game.h"
 #include "Enemies.h"
 #include "util.h"
 
@@ -24,6 +25,7 @@ static Rectangle idle1 = {1336, 0, 88, 94};
 static Rectangle idle2 = {1424, 0, 88, 94};
 static Rectangle run1 = {1512, 0, 88, 94};
 static Rectangle run2 = {1600, 0, 88, 94};
+static Rectangle dead = {1688, 0, 88, 94};
 
 static Rectangle collider1 = {xPos + 20, 0, 40, 55};
 static Rectangle collider2 = {xPos + 45, 0, 40, 30};
@@ -32,6 +34,10 @@ void DrawCollider(float scale);
 bool IsColliding(float scale, float yPos);
 
 Rectangle GetTextureRect() {
+    if(IsDead()) {
+        return dead;
+    }
+    
     if(jumping) {
         return idle1;
     }

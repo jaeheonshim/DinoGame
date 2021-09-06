@@ -1,6 +1,7 @@
 #include <raylib.h>
 
 #include "main.h"
+#include "Game.h"
 #include "BackgroundRenderer.h"
 #include "Player.h"
 #include "Enemies.h"
@@ -18,6 +19,7 @@ int main() {
     Texture2D sprites = LoadTexture("assets/spritesheet.png");
     Vector2 position = {0, 0};
 
+    InitGame();
     InitPlayer(sprites);
     InitBackground(sprites);
     InitEnemyRenderer(sprites);
@@ -31,9 +33,12 @@ int main() {
         float delta = GetFrameTime();
 
         ClearBackground(WHITE);
-        ScrollBackground(delta, 600);
-        UpdateEnemies(delta, 600);
-        UpdatePlayer(delta);
+
+        if(!IsDead()) {
+            ScrollBackground(delta, 600);
+            UpdateEnemies(delta, 600);
+            UpdatePlayer(delta);
+        }
 
         if(IsKeyDown(KEY_SPACE)) {
             JumpPlayer();
@@ -45,6 +50,10 @@ int main() {
 
         if(IsKeyPressed(KEY_Z)) {
             DequeueEnemy();
+        }
+
+        if(IsColliding(scale, yPos)) {
+            OnDeath();
         }
 
         DrawBackground(scale, yPos);

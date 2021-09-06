@@ -1,5 +1,5 @@
 make.exe --dry-run --always-make --keep-going --print-directory
 make: Entering directory 'c:/Users/jaehe/OneDrive/Documents/Projects/C/Dinosaur'
-gcc -g ./src/BackgroundRenderer.c ./src/Enemies.c ./src/EnemyRenderer.c ./src/Player.c ./src/main.c ./src/BackgroundRenderer.h ./src/Enemies.h ./src/EnemyRenderer.h ./src/Player.h ./src/main.h ./src/util.h -L./lib -I. -IC:/raylib/raylib/src -IC:/raylib/raylib/src/external -lraylib -lopengl32 -lgdi32 -lwinmm
+gcc -g ./src/BackgroundRenderer.c ./src/Enemies.c ./src/EnemyRenderer.c ./src/Game.c ./src/Player.c ./src/main.c ./src/BackgroundRenderer.h ./src/Enemies.h ./src/EnemyRenderer.h ./src/Player.h ./src/main.h ./src/util.h -L./lib -I. -IC:/raylib/raylib/src -IC:/raylib/raylib/src/external -lraylib -lopengl32 -lgdi32 -lwinmm
 make: Leaving directory 'c:/Users/jaehe/OneDrive/Documents/Projects/C/Dinosaur'
  
